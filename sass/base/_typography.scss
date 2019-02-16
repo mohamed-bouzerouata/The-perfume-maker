@@ -1,0 +1,71 @@
+.heading-primary{
+	color: #fff;
+	backface-visibility: hidden;
+	display: flex;
+	flex-flow: column;
+    	
+    &-primary--main{
+	    display: block;
+	    font-size: 4rem;
+	    font-family: 'Amiri', serif;
+	    font-weight: 700i;
+	    animation-name: moveInLeft;
+	animation-duration: 3s;
+	/*a    nimation-delay: 1s;*/
+	
+    }
+    &-primary--sub{
+	    display: block;
+	    font-size: 3rem;
+	    font-family: 'Aref Ruqaa', serif;
+	    animation-name: moveInRight;
+	    animation-duration: 3s;
+	
+    }
+
+}
+ .heading-secondary{
+	font-size: 3.5rem;
+	// background-image:linear-gradient(to left ,
+	// rgba(10, 235, 47, 0.842) , 
+	// rgba(17, 223, 68, 0.37)) ;
+	background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+	background-size: 400%;
+	display: inline-block;
+	font-family: 'Amiri', serif;
+	background-clip: text;
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	transition: all .2s ;
+
+	&:hover {
+		// transform: skewY(2deg)  skewX(15deg);
+		text-shadow: .2rem .2rem rgba($color-black , .2);
+
+			animation: animate 8s linear infinite;
+		}
+		@keyframes animate {
+			0% {
+				background-position: 0%;
+			}
+			100% {
+				background-position: 400%;
+			}
+		}
+ }
+ .heading-tertiary{
+	 font-size: $default-font-sizes;
+	background-image:linear-gradient(90deg ,#40E0D0,#FF8C00,#FF0080);
+	background-clip: text;
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	 font-weight: 700;
+	 text-transform: uppercase;
+
+ }
+ .paragraph{
+	font-size: $default-font-sizes;
+	&:not(:last-child){
+		margin-bottom: 3rem;
+	} 
+ }

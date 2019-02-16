@@ -1,0 +1,383 @@
+.card{
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    
+    &__side{
+    height: 25rem;
+    transition: all 1s  ease;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($color-black , .15);
+    
+   
+    &--front {
+        background-color: $color-white;
+        // position: relative;
+    }
+
+
+    &--back {
+        transform: rotateY(180deg);
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+        &-1{
+            background-image: linear-gradient(to left bottom ,
+            $color-card-back-side-row-1 , 
+            $color-card-back-side-row-1_1) ;
+        }
+        &-2{
+            background-image: linear-gradient(to left bottom , 
+            $color-card-back-side-row-1 , 
+            $color-card-back-side-row-1_1) ;
+        }
+        &-3{
+            background-image: linear-gradient(to left bottom , 
+            $color-card-back-side-row-1 , 
+            $color-card-back-side-row-1_1) ;
+        }
+        &-4{
+            background-image: linear-gradient(to left bottom , 
+            $color-card-back-side-row-1 , 
+            $color-card-back-side-row-1_1) ;
+        }
+        &-5{
+            background-image: linear-gradient(to left bottom , 
+            $color-card-back-side-row-2 , 
+            $color-card-back-side-row-2_1) ;
+        }
+        &-6{
+            background-image: linear-gradient(to left bottom , 
+            $color-card-back-side-row-2 , 
+            $color-card-back-side-row-2_1) ;
+        }
+        &-7{
+            background-image: linear-gradient(to left bottom , 
+            $color-card-back-side-row-2 , 
+            $color-card-back-side-row-2_1) ;
+        }
+        &-8{
+            background-image: linear-gradient(to left bottom , 
+            $color-card-back-side-row-2 , 
+            $color-card-back-side-row-2_1) ;
+        }
+    
+    }
+
+
+    }
+    
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+    &:hover &__side--back {
+        transform: rotateY(0deg);
+        
+    }
+    // front styling //https://stackoverflow.com/questions/5503115/css3-curved-surface-3d-transform-perspective-help/6080900
+    
+    
+    &__picture{
+       background-size: cover;
+       background-position: center;
+       height: 20rem;
+    //    background-blend-mode: difference;
+       background-blend-mode: soft-light; 
+        &--1{
+            background-image:linear-gradient(to left bottom ,
+            $color-card-back-side-row-1 ,
+            $color-card-back-side-row-1_1) ,
+             url(../images/Tom-Ford-Anthracite-Noir.jpg); 
+        }
+        &--2{
+            background-image:linear-gradient(to left bottom ,
+            $color-card-back-side-row-1 ,
+            $color-card-back-side-row-1_1) ,
+            url(../images/Calvin-Klein-Obsessed.jpg); 
+            
+        }
+        &--3{
+            background-image:linear-gradient(to left bottom ,
+            $color-card-back-side-row-1 ,
+            $color-card-back-side-row-1_1) ,
+            url(../images/Davidoff-Cool-Water-Wave.jpg);
+             
+        }
+        &--4{
+            background-image:linear-gradient(to left bottom ,
+            $color-card-back-side-row-1 ,
+            $color-card-back-side-row-1_1) ,
+             url(../images/givenchi.png); 
+        }
+        &--5{
+            background-image:linear-gradient(to left bottom ,
+            $color-card-back-side-row-2 ,
+            $color-card-back-side-row-2_1) , 
+            url(../images/Tom-Ford-Anthracite-Noir.jpg); 
+        }
+        &--6{
+            background-image:linear-gradient(to left bottom ,
+            $color-card-back-side-row-2 ,
+            $color-card-back-side-row-2_1) , 
+            url(../images/Tom-Ford-Anthracite-Noir.jpg); 
+        }
+        &--7{
+            background-image:linear-gradient(to left bottom ,
+            $color-card-back-side-row-2 ,
+            $color-card-back-side-row-2_1) ,
+            url(../images/Tom-Ford-Anthracite-Noir.jpg); 
+        }
+        &--8{
+            background-image:linear-gradient(to left bottom ,
+            $color-card-back-side-row-2 ,
+            $color-card-back-side-row-2_1) ,
+            url(../images/Tom-Ford-Anthracite-Noir.jpg); 
+        }
+        &--9{
+            background-image: url(../images/Tom-Ford-Anthracite-Noir.jpg); 
+        }
+        &--10{
+            background-image: url(../images/Tom-Ford-Anthracite-Noir.jpg); 
+        }
+        &--11{
+            background-image: url(../images/Tom-Ford-Anthracite-Noir.jpg); 
+        }
+        &--12{
+            background-image: url(../images/Tom-Ford-Anthracite-Noir.jpg); 
+        }
+    }
+
+
+    &__heading{
+        font-size: 2.8rem;
+        font-weight: 800;
+        text-decoration: uppercase;
+        text-align: right; 
+        color: $color-black;
+        position: absolute;
+        right: 3rem;
+        font-family: 'Dancing Script', cursive;
+    }
+
+
+    &__heading-span{
+         
+        &--1{
+            // background-image: linear-gradient(to left bottom ,
+            // rgba($color-card-back-side-row-1 , .85) ,
+            // rgba($color-card-back-side-row-1_1 , .85)) ;
+            
+        }
+            
+    } 
+    &__prix{
+        position: absolute;
+        top: 1rem;
+        right: 0;
+        border-radius: 100%;
+        width: 30%; 
+        text-align: center;
+        overflow: hidden;
+        color: black;
+        height: 3rem;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        font-family: 'Dancing Script', cursive;
+        font-weight: 800;
+
+
+        &--1{
+            background-image:linear-gradient(to left bottom ,
+            $color-card-back-side-row-1 ,
+            $color-card-back-side-row-1_1) ;
+        }
+        &--2{
+            background-image:linear-gradient(to left bottom ,
+            $color-card-back-side-row-1 ,
+            $color-card-back-side-row-1_1) ;
+        }
+        &--3{
+            background-image:linear-gradient(to left bottom ,
+            $color-card-back-side-row-1 ,
+            $color-card-back-side-row-1_1) ;
+        }
+        &--4{
+            background-image:linear-gradient(to left bottom ,
+            $color-card-back-side-row-1 ,
+            $color-card-back-side-row-1_1) ;
+        }
+        &--5{
+            background-image:linear-gradient(to left bottom ,
+            $color-card-back-side-row-2 ,
+            $color-card-back-side-row-2_1) ;
+        }
+        &--6{
+            background-image:linear-gradient(to left bottom ,
+            $color-card-back-side-row-2 ,
+            $color-card-back-side-row-2_1) ;
+        }
+        &--7{
+            background-image:linear-gradient(to left bottom ,
+            $color-card-back-side-row-2 ,
+            $color-card-back-side-row-2_1) ;
+        }
+        &--8{
+            background-image:linear-gradient(to left bottom ,
+            $color-card-back-side-row-2 ,
+            $color-card-back-side-row-2_1) ;
+        }
+        &--9{
+            background-image:linear-gradient(to left bottom ,
+            $color-card-back-side-row-1 ,
+            $color-card-back-side-row-1_1) ;
+        }
+        &--10{
+            background-image:linear-gradient(to left bottom ,
+            $color-card-back-side-row-1 ,
+            $color-card-back-side-row-1_1) ;
+        }
+        &--11{
+            background-image:linear-gradient(to left bottom ,
+            $color-card-back-side-row-1 ,
+            $color-card-back-side-row-1_1) ;
+        }
+        &--12{
+            background-image:linear-gradient(to left bottom ,
+            $color-card-back-side-row-1 ,
+            $color-card-back-side-row-1_1) ;
+        }
+
+    }
+    &__cta{
+        position: relative;
+
+
+        &--paragraph01{
+            position: absolute;
+            height: 20rem;
+            text-align: center;
+            color: $color-black;
+            font-size: 1.8rem;
+            border-radius: 6px;
+            box-shadow: 0 1.5rem 4rem rgba($color-black, .85);
+            font-family: 'Amiri', serif;
+        }
+        &--paragraph02{
+            position: absolute;
+            height: 20rem;
+            text-align: center;
+            color: $color-black;
+            font-size: 1.8rem;
+            border-radius: 6px;
+            box-shadow: 0 1.5rem 4rem rgba($color-black, .85);
+            font-family: 'Amiri', serif;
+        }
+        &--paragraph03{
+            position: absolute;
+            height: 20rem;
+            text-align: center;
+            color: $color-black;
+            font-size: 1.8rem;
+            border-radius: 6px;
+            box-shadow: 0 1.5rem 4rem rgba($color-black, .85);
+            font-family: 'Amiri', serif;
+        }
+        &--paragraph04{
+            position: absolute;
+            height: 20rem;
+            text-align: center;
+            color: $color-black;
+            font-size: 1.8rem;
+            border-radius: 6px;
+            box-shadow: 0 1.5rem 4rem rgba($color-black, .85);
+            font-family: 'Amiri', serif;
+        }
+        &--paragraph05{
+            position: absolute;
+            height: 20rem;
+            text-align: center;
+            color: $color-black;
+            font-size: 1.8rem;
+            border-radius: 6px;
+            box-shadow: 0 1.5rem 4rem rgba($color-black, .85);
+            font-family: 'Amiri', serif;
+        }
+        &--paragraph06{
+            position: absolute;
+            height: 20rem;
+            text-align: center;
+            color: $color-black;
+            font-size: 1.8rem;
+            border-radius: 6px;
+            box-shadow: 0 1.5rem 4rem rgba($color-black, .85);
+            font-family: 'Amiri', serif;
+        }
+        &--paragraph07{
+            position: absolute;
+            height: 20rem;
+            text-align: center;
+            color: $color-black;
+            font-size: 1.8rem;
+            border-radius: 6px;
+            box-shadow: 0 1.5rem 4rem rgba($color-black, .85);
+            font-family: 'Amiri', serif;
+        }
+        &--paragraph08{
+            position: absolute;
+            height: 20rem;
+            text-align: center;
+            color: $color-black;
+            font-size: 1.8rem;
+            border-radius: 6px;
+            box-shadow: 0 1.5rem 4rem rgba($color-black, .85);
+            font-family: 'Amiri', serif;
+        }
+        &--paragraph09{
+            position: absolute;
+            height: 20rem;
+            text-align: center;
+            color: $color-black;
+            font-size: 1.8rem;
+            border-radius: 6px;
+            box-shadow: 0 1.5rem 4rem rgba($color-black, .85);
+            font-family: 'Amiri', serif;
+        }
+        &--paragraph10{
+            position: absolute;
+            height: 20rem;
+            text-align: center;
+            color: $color-black;
+            font-size: 1.8rem;
+            border-radius: 6px;
+            box-shadow: 0 1.5rem 4rem rgba($color-black, .85);
+            font-family: 'Amiri', serif;
+        }
+        &--paragraph11{
+            position: absolute;
+            height: 20rem;
+            text-align: center;
+            color: $color-black;
+            font-size: 1.8rem;
+            border-radius: 6px;
+            box-shadow: 0 1.5rem 4rem rgba($color-black, .85);
+            font-family: 'Amiri', serif;
+        }
+        &--paragraph12{
+            position: absolute;
+            height: 20rem;
+            text-align: center;
+            color: $color-black;
+            font-size: 1.8rem;
+            border-radius: 6px;
+            box-shadow: 0 1.5rem 4rem rgba($color-black, .85);
+            font-family: 'Amiri', serif;
+        }
+
+    }
+}

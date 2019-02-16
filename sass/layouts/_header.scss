@@ -1,0 +1,33 @@
+.header{
+	height: 90vh;
+	background-image: linear-gradient(to right bottom, 
+	rgba(10, 230, 94, 0.719),
+	#799F0C),
+	url(../Images/alex.jpg);
+	background-size: cover;
+	-webkit-clip-path: polygon(0 0 , 100% 0 , 100% 80vh , 0 100% );
+	clip-path: polygon(0 0 , 100% 0 , 100% 80vh , 0 100% );
+	position: relative;
+
+	// 
+	
+	
+	&__text-box{
+		top: 50%;
+		right: 50%;
+		position: absolute;
+		transform: translate(50% , -80%);
+		text-align: center;
+	}
+	&__logo-box{
+		position: absolute;
+		top: -.4rem;
+		right: 1rem;
+	}
+	&__logo{
+		width: 15rem;
+		font-family: 'Rakkas', cursive;
+		animation: moveInLeft 3s .75s;/* hedi le btn tban mba3d maytesrra l'animation te3 les deux titres*/
+		animation-fill-mode: backwards;
+	}
+}

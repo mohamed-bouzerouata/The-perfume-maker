@@ -1,0 +1,195 @@
+// .btn:link,/* hnaya boutton lewla*/
+// .btn:visited {
+// 	text-decoration: none;
+// 	display: block;
+// 	translate: all .2s ;
+// 	position: relative;
+// 	animation: moveinbottom 3s ;
+// 	&:hover{
+// 		transform: translateY(-.3rem);
+// 		box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.219) ;
+		
+// 		&::after{
+// 			transform: scaleX(1.4) scaleY(1.6);/*hedi te3 kitecliker 3liha ch7al tekbar*/
+// 			opacity: 0;/*hedi te3 bech twellli transparante*/
+// 		}
+// 	}
+// 	&:active{
+// 		transform: translateY(-.1rem);
+// 		box-shadow: 0 .5rem 1rem  rgba(0, 0, 0, 0.219);
+// 	}
+	
+// }
+
+// .btn--white{
+// 	background-color: #fff;
+// 	color: #777;
+// 	border-radius: 10rem;
+// 	margin-top: 2rem;
+// 	&::after{
+// 		background-color: #fff;
+// 	}
+// 	&::after{
+// 		content: "";
+// 		display: block;
+// 		height: 100%;
+// 		width: 100%;
+// 		border-radius: 100%;
+// 		position: absolute;
+// 		top: 0;
+// 		right: 0;
+// 		z-index: -1;/* hedi te3 kidarrag la 1 boutton li3andah valeur kbira yban */
+// 		transition: all .4s;/* l'effet ch7al yban */
+		
+// 	}
+	
+// }
+
+
+// .btn:link,
+// .btn:visited {
+//     text-transform: uppercase;
+//     text-decoration: none;
+//     padding: 1.5rem 4rem;
+//     display: inline-block;
+//     border-radius: 5rem;
+//     transition: all .3s ;
+//     position: relative;
+    
+// }
+// .btn:hover{
+//     transform: translateY(-3px);
+//     box-shadow: 0 1.5rem 2rem rgba(black , .2) ;  
+// }
+// .btn:active{
+//     transform: translateY(-3px);
+//     box-shadow: 0 1.5rem 2rem rgba(black , .2) ;  
+// }
+// .btn__white{
+//     background-color:  $color-orange;
+//     color: #000; 
+// }
+// .btn::after{
+//     content: "";
+//     height: 100%; width: 100%;
+//     border-radius: 5rem;
+//     position: absolute;
+//     top: 0; left: 0;
+//     z-index: -1;
+//     transition:  all .3s;
+// }
+// .btn__white::after{
+//     background-color: $color-orange;
+// }
+// .btn:hover::after{
+//     transform: scale(1.5);
+//     opacity: 0;
+// }
+// .btn__animated{
+//     animation: moveintop .8s ease-out;
+// }
+// @keyframes moveintop{
+//     0%{
+//         opacity: 0;
+//         transform: translateY(5rem);
+//     }
+//     100%{
+//         opacity: 1;
+//         transform: translateY(0);
+//     }
+// }
+
+// for button text ,
+.btn-text {
+	&:link,
+	&:visited{
+		color : $color-background-light;
+		display: inline-block;
+		font-size: $default-font-sizes;
+		text-decoration: none;
+		margin-top: 5rem;
+		padding: 3px;
+		border-bottom: 1px solid $color-background-light ;
+		transition: all .2s;
+	}
+
+	&:hover{
+		background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+		color: $color-white;
+		box-shadow: 0 1rem 2rem rgba($color-black, .15);
+		transform: translateY(-2px);
+		
+	}
+
+	&:active{
+		box-shadow: 0 .5rem 2rem rgba($color-black, .15);
+		transform: translateY(0px);
+		
+
+	}
+}
+
+
+.btn {
+	position: absolute;
+	top: 120%;
+	left: 50%;
+	transform: translate(-50%, -20%);
+	width: 20rem;
+	height: 6rem;
+	text-align: center;
+	line-height: 6rem;
+	color: #fff;
+	font-size: 2.4rem;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-family: sans-serif;
+	box-sizing: border-box;
+	background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+	background-size: 400%;
+	border-radius: 3rem;
+	z-index: 1;
+}
+
+.btn:hover {
+	animation: animate 8s linear infinite;
+}
+@keyframes animate {
+	0% {
+		background-position: 0%;
+	}
+	100% {
+		background-position: 400%;
+	}
+}
+.btn:before {
+	content: '';
+	position: absolute;
+	top: -0.5rem; 
+	left: -0.5rem;
+	right: -0.5rem;
+	bottom: -0.5rem;
+	z-index: -1;
+	background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+	background-size: 400%;
+	border-radius: 4rem;
+	filter: blur(3rem);
+	opacity: 0;
+	transition: 0.5s;
+
+}
+.btn:hover::before {
+	filter: blur(3rem);
+	opacity: 1;
+	animation: animate 8s linear infinite;
+}
+
+
+
+
+
+
+
+
+
+

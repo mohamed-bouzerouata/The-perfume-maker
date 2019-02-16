@@ -1,0 +1,11 @@
+{
+  "name": "project-01",
+  "version": "1.0.0",
+  "description": "landing page for project 01",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Mo_Dev",
+  "license": "ISC"
+}

@@ -1,0 +1,84 @@
+.feature-box {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(../../Images/marc.jpg),
+    linear-gradient(to left ,
+    rgba(10, 235, 47, 0.842) , 
+    rgba(17, 223, 68, 0.37)) ;
+    z-index: 3;
+    
+}
+.quote {
+    width: 120rem;
+    min-height: 40rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    z-index: 2;
+}
+.quote .box {
+    position: relative;
+    width: 36rem;
+    height: 40rem;
+    background: #fff;
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 3rem;
+    box-shadow: -1rem 2.5rem 5rem rgba(0,0,0, .2); 
+}
+.quote .box:hover {
+    box-shadow: -2rem 5rem 10rem rgba(0, 0, 0, .5);
+}
+.bg {
+    position: absolute;
+    top: 152rem;;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: 0.5s;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+}
+.quote .box.box1:hover ~ .bg,
+.quote .box.box1:hover {
+    opacity: 1;
+    background: linear-gradient(#03a9f4, #e91e63);
+
+}
+.quote .box.box2:hover ~ .bg,
+.quote .box.box2:hover {
+    opacity: 1;
+    background: linear-gradient(#ffc107, #19fd36);
+}
+.quote .box.box3:hover ~ .bg,
+.quote .box.box3:hover {
+    opacity: 1;
+    background: linear-gradient(#ffc107, #e91e63);
+}
+.quote .box:hover p {
+    color: #fff;
+}
+.quote .box:hover p {
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+}
+.quote .box h2 {
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.quote .box:hover h2 {
+    color: #fff;
+}
